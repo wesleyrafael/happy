@@ -75,7 +75,7 @@
     justify-content: center;
 
     transition: background-color 0.2s;
-};
+}
 
 .content-wrapper .enter-app:hover {
     background: #96FEFF;
