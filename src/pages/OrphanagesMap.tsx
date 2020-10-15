@@ -14,7 +14,11 @@ interface Orphanage {
     name: string;
 };
 
-const MarkerWithPopup = (props: any) => {
+interface MarkerWithPopupProps {
+    orphanage: Orphanage
+}
+
+const MarkerWithPopup = (props: MarkerWithPopupProps) => {
     const orphanage: Orphanage = props.orphanage;
 
     const { latitude, longitude, id, name } = orphanage;
