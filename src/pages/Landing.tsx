@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 import './../styles/pages/landing.css';
 
-const Landing: React.FC = () => (
+const Landing = () => (
     <div id="page-landing">
         <div className="content-wrapper">
             <img src={logoImg} alt="Happy" />

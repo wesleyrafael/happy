@@ -34,7 +34,7 @@ const MarkerWithPopup = (props: any) => {
     )
 };
 
-const OrphanagesMap: React.FC = () => {
+const OrphanagesMap = () => {
     const [orphanages, setOrphanages] = useState<Orphanage[]>([]);
 
     useEffect(() => {
