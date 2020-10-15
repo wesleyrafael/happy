@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, Fragment } from 'react';
 import mapMarkerImg from "../images/map-marker.svg";
 import { Link } from 'react-router-dom';
 import { FiPlus, FiArrowRight } from 'react-icons/fi';
@@ -23,7 +23,6 @@ const MarkerWithPopup = (props: any) => {
         <Marker
             position={[latitude, longitude]}
             icon={mapIcon}
-            key={`${id}`}
         >
             <Popup closeButton={false} minWidth={240} maxWidth={240} className="map-popup">
                 {name}
@@ -49,7 +48,7 @@ const OrphanagesMap: React.FC = () => {
         } catch (error) {
             console.log(error);
         }
-    }
+    };
 
     return (
         <div id="page-map">
@@ -80,7 +79,9 @@ const OrphanagesMap: React.FC = () => {
                 />
 
                 {orphanages.map(orphanage => (
-                    <MarkerWithPopup orphanage={orphanage} />
+                    <Fragment key={`${orphanage.id}`}>
+                        <MarkerWithPopup orphanage={orphanage} />
+                    </Fragment>
                 ))}
 
 
